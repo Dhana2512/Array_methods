@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Methods</title>
+</head>
+<body>
+    <!-- 
+        Array Methods
+1. join
+2. indexOf
+3. lastindexOf
+4. includes
+5. find
+6. findIndex
+7. map
+8. filter
+9. forEach
+10. reduce
+11. reduceRight
+12. some
+13. every
+14. push
+15. pop
+16. sort
+17. shift
+18. unshift
+19. splice
+20. reverse
+21. fill
+22. copyWithin
+23. entries
+
+     -->
+    <script>
+
+        'use strict';
+
+        //join
+        const a = ['Banana','Mango', 'Orange', 'Apple', 'Mango'];
+        console.log(a.join(),'join');
+        console.log(a.join('-'),'join');
+        console.log(a.join(""),'join');
+
+        //indexOf
+        console.log(a.indexOf('Banana'),'indexOf');
+        console.log(a.indexOf('banana'),'indexOf');
+        console.log(a.indexOf('Mango',3),'indexOf');
+
+        //lastIndexOf
+        console.log(a.lastIndexOf('Mango'),'lastIndexOf');
+        console.log(a.lastIndexOf('Mango',2),'lastIndexOf');
+
+
+        //includes
+        console.log(a.includes('Mango'),'includes');
+
+        //push
+        console.log(a.push("papaya"),'push');
+
+        //pop
+        console.log(a.pop(),'pop');
+
+        //sort
+        console.log(a.sort(),'sort');
+
+        //shift
+        console.log(a.shift(),'shift');
+
+        //unshift
+        console.log(a.unshift("apple"),'unshift');
+
+        //splice
+        console.log(a);
+        console.log(a.splice(4,1,"papaya"),'splice');
+
+        //reverse
+        console.log(a.reverse(),'reverse');
+
+        //fill
+        console.log(a.fill("aaa",3,5),'fill');
+
+        //copyWithin
+        const b = [1,2,3,4,5]
+        console.log(b.copyWithin(0,2,4),'copyWithin');
+
+        //entries
+        const x = a.entries();
+        console.log(x.next().value,'entries');
+        console.log(x.next().value,'entries');
+
+        //find
+        const c = ['apple','banana','papaya','grapes'];
+        const out = c.find(name => name.includes('a'));
+        console.log(out);
+
+        //findIndex
+        const out1 = c.findIndex(name => name.includes('a'));
+        console.log(out1);
+
+        //filter
+        const out2 = c.filter(name => name.includes('a'));
+        console.log(out2);
+
+        //map
+        const out3 = c.map(name => name+' '+'fruit');
+        console.log(out3);
+
+        //forEach
+        const out4 = c.forEach(name => console.log(c));
+        console.log(out4);
+
+        //reduce
+        const y = [1,2,3,4,5]
+        const sum = y.reduce((fir,sec) => fir+sec);
+        console.log(sum)
+
+        //some
+        const out5 = c.some(name => name.includes('a'));
+        console.log(out5);
+
+        //every
+        const out6 = c.every(name => name.includes('p'));
+        console.log(out6);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
